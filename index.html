@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculator</title>
+		<link href="_styles.css" rel="stylesheet" />
+		<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+	</head>
+
+	<body class="bg-black text-white grid place-items-center min-h-screen">
+		<div class="col-span-2 hidden bg-[#CC7F08]">
+			used to hide classes injected dynamically
+			<button
+				id="${num}"
+				class="bg-[#292929] p-5 block h-full rounded-md text-xl font-extrabold"
+			>
+				${num}
+			</button>
+		</div>
+		<div class="max-w-[360px] shadow-sm p-4 border space-y-3 border-white w-full">
+			<div id="display" class="border min-h-[150px] p-3 flex items-end overflow-x-auto">
+				<p
+					id="displayContent"
+					data-value="0"
+					class="font-bold text-3xl max-h-10 w-fit ml-auto"
+				>
+					0
+				</p>
+			</div>
+			<div class="space-y-2">
+				<div id="special-buttons" class="grid grid-cols-4 gap-2"></div>
+				<div class="flex items-start gap-2">
+					<div class="grid grid-cols-3 flex-[0.75] gap-2" id="numpad"></div>
+					<div class="w-[25%] grid gap-2 flex-[0.25]" id="operations"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="app.js"></script>
+</html>
